@@ -31,8 +31,8 @@ const SearchResultItem: React.FC<SearchResultItemProps> = ({ result, onClick }) 
 
   return (
     <div
-      className={`p-4 border-b border-gray-200 cursor-pointer transition-colors hover:bg-gray-50 ${
-        result.isSelected ? 'bg-blue-50 border-l-4 border-l-blue-500' : ''
+      className={`p-4 border-b border-gray-200 cursor-pointer transition-colors hover:bg-blue-400 ${
+        result.isSelected ? 'bg-blue-500 text-white ' : 'text-gray-900'
       }`}
       onClick={() => onClick(result.filename)}
     >
@@ -43,13 +43,13 @@ const SearchResultItem: React.FC<SearchResultItemProps> = ({ result, onClick }) 
             {result.filename.split(" ")[1]}
           </span>
         </div>
-        <span className="text-xs text-gray-500">{result.data.date}</span>
+        <span className="text-xs">{result.data.date}</span>
       </div>
-      <h4 className="text-sm font-medium text-gray-900 leading-5 mb-1">
+      <h4 className="text-sm font-medium leading-5 mb-1">
         {result.data.title}
       </h4>
       {result.type === 'product' && (
-        <div className="text-xs text-gray-500 mt-2">
+        <div className="text-xs mt-2">
           From: {result.data.date} → To: May 23, 2025
         </div>
       )}

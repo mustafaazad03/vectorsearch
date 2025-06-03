@@ -8,7 +8,7 @@ import SearchResultItem from './SearchResultItem';
 interface SearchHeaderProps {
   searchQuery: string;
   onSearchChange: (query: string) => void;
-  searchData: ParsedTranscriptFile;
+  searchData: ParsedTranscriptFile[];
   onResultSelect: (id: string) => void;
 
 }
